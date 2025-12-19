@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using Dalamud.Game.ClientState.Conditions;
 using Dalamud.Hooking;
 using FFXIVClientStructs.FFXIV.Client.System.Resource;
 using FFXIVClientStructs.FFXIV.Client.System.Resource.Handle;
@@ -199,7 +200,7 @@ internal unsafe class Filter : IDisposable
         try
         {
             var shouldFilter = PlaySpecificSoundDetourInner(a1, idx);
-            if (shouldFilter)
+            if (shouldFilter && Services.Condition[ConditionFlag.InCombat])
             {
                 a1 = InfoPtr;
                 idx = 0;
