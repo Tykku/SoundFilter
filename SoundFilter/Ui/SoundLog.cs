@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Numerics;
-using Dalamud.Interface;
 using Dalamud.Bindings.ImGui;
+using Dalamud.Interface;
 using SoundFilter.Resources;
 
 namespace SoundFilter.Ui;
