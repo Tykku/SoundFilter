@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using Dalamud.Bindings.ImGui;
 using Dalamud.Game;
 using Dalamud.Interface;
-using Dalamud.Bindings.ImGui;
 
 namespace SoundFilter;
 
